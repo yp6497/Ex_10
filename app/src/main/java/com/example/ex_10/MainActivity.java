@@ -3,6 +3,7 @@ package com.example.ex_10;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -49,9 +50,6 @@ public class MainActivity extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
-
     }
 
     public void saveB(View view) {
@@ -61,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
             OutputStreamWriter osw = new OutputStreamWriter(fos);
             BufferedWriter bw = new BufferedWriter(osw);
             st= s+ed.getText().toString();
-            //s=s+st;
+            s=st;
             bw.write(st);
             bw.close();
             t.setText(st);
@@ -72,6 +70,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void resetB(View view) {
+
+        ed.setText("");
+        t.setText("");
     }
 
     public void exitB(View view) {
@@ -92,22 +93,18 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
-        menu.add("Credits");
+        getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
-    /**
-     * description- if "credits" selected: goes to the credits activity.
-     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        String st = item.getTitle().toString();
-        if (st.endsWith("Credits")) {
+        String st=item.getTitle().toString();
+        if(st.endsWith("Credits")) {
             Intent si = new Intent(this, creditsActivity.class);
             startActivity(si);
         }
