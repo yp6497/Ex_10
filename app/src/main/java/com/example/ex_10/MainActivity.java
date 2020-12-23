@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 sb.append(st+'\n');
                 st = br.readLine();
             }
-            s=sb.toString();
+            s=sb.toString(); //
             isr.close();
             t.setText(s);
 
