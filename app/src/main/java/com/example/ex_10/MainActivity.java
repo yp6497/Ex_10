@@ -23,7 +23,7 @@ import java.io.OutputStreamWriter;
 /**
  * @author Yulia Piavka <yp6497@bs.amalnet.k12.il>
  * @version 1.1
- * @since 23/12/2020
+ * @since 21/12/2020
  * short description- 3 buttons, one editText for an input and one textView to show the input. always adds new text(never deleting him).
  */
 public class MainActivity extends AppCompatActivity {

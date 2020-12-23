@@ -12,7 +12,7 @@ public class creditsActivityy extends AppCompatActivity {
     /**
      * @author Yulia Piavka <yp6497@bs.amalnet.k12.il>
      * @version 1.1
-     * @since 23/12/2020
+     * @since 21/12/2020
      * short description- the credits.
      */
     public class creditsActivity extends AppCompatActivity {
